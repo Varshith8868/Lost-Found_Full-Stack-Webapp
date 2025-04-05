@@ -1,0 +1,76 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 207 90% 54%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 174 42% 51%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 37 100% 50%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 207 90% 54%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto px-4 max-w-7xl w-full;
+  }
+  
+  .btn-primary {
+    @apply bg-klh-primary text-white hover:bg-klh-primary/90 rounded-md px-4 py-2 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-klh-secondary text-white hover:bg-klh-secondary/90 rounded-md px-4 py-2 transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-klh-primary text-klh-primary hover:bg-klh-light rounded-md px-4 py-2 transition-colors;
+  }
+  
+  .input-field {
+    @apply w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-klh-primary/50;
+  }
+  
+  .card-item {
+    @apply bg-white rounded-lg shadow-md p-4 border border-border hover:shadow-lg transition-shadow duration-200;
+  }
+
+  .animate-enter {
+    @apply animate-fade-in;
+  }
+}
